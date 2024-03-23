@@ -1,0 +1,14 @@
+<div *ngIf="showWinner; else voteTemplate">
+    <h2>Vainqueur:</h2>
+    <div *ngFor="let imageChoice of imageChoices">
+        <img [src]="imageChoice.imageUrl">
+        <p>Points: {{ imageChoice.points }}</p>
+    </div>
+</div>
+
+<ng-template #voteTemplate>
+    <div *ngFor="let imageChoice of imageChoices">
+        <img [src]="imageChoice.imageUrl" (click)="onVote(imageChoice.id)">
+        <p>Points: {{ imageChoice.points }}</p>
+    </div>
+</ng-template>

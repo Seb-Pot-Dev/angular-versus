@@ -1,0 +1,24 @@
+.choices-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .choice {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .choice:hover {
+    transform: scale(1.1);
+  }
+  
+  .choice img {
+    width: 200px; /* Ajustez selon votre besoin */
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
